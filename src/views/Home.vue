@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
+    <Header></Header>
     <Login></Login>
   </div>
 </template>
@@ -8,11 +8,18 @@
 <script>
 // @ is an alias to /src
 import Login from "@/components/Login.vue";
+import Header from "@/components/shared/Header.vue"
 
 export default {
   name: "home",
   components: {
-    Login
-  }
+    Login,
+    Header
+  },
+  data() {
+    return {
+      isCreatingAcct: false
+    }
+  },
 };
 </script>
